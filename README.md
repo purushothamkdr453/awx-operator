@@ -8,7 +8,9 @@ makesure you have kubernetes cluster running with atleast 4 cpus & 6GB ram.
 
 **awx operator installation**
 
+```
 kubectl apply -f awx-resources.yaml
+```
 
 **Note**: the above command creates `awx` namespace and deploys awx operator in `awx` namespace. Ensure that pod is running state prior proceeding.
 
@@ -20,7 +22,9 @@ kubectl config set-context --current --namespace=awx
 
 **Deploying awx instance**
 
+```
 kubectl apply -f awx-demo.yaml
+```
 
 The above command deploys `postgres` & `awx` instance. This will take some time. So please wait.
 Makesure that all the pods are in running state.
